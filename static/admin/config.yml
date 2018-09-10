@@ -8,6 +8,7 @@ public_folder: /img
 collections:
   - name: "config"
     label: "Settings"
+    delete: false
     files:
       - file: "src/settings/index.md"
         label: "Site Settings"
@@ -39,12 +40,11 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
-    delete: "false"
+    delete: false
     files: 
       - file: "src/pages/index.md"
         label: "Louis Marchesi"
         name: "home"
-        delete: "false"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: Title, name: title, widget: string}
@@ -54,7 +54,6 @@ collections:
       - file: "src/pages/rooms.md"
         label: "Rooms"
         name: "rooms"
-        delete: "false"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "rooms-page"}
           - {label: Title, name: title, widget: string }
