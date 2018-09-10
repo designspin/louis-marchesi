@@ -43,6 +43,7 @@ collections:
       - file: "src/pages/index.md"
         label: "Louis Marchesi"
         name: "home"
+        delete: "false"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: Title, name: title, widget: string}
@@ -52,6 +53,7 @@ collections:
       - file: "src/pages/rooms.md"
         label: "Rooms"
         name: "rooms"
+        delete: "false"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "rooms-page"}
           - {label: Title, name: title, widget: string }
