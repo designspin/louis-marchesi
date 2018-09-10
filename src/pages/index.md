@@ -1,5 +1,5 @@
 ---
-templateKey: rooms-page
+templateKey: home-page
 title: Louis Marchesi
 description: >-
   The Louis Marchesi is a pub offering entertainment, accommodation, great food
