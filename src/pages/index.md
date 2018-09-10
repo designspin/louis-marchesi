@@ -1,6 +1,6 @@
 ---
 templateKey: home-page
-title: Louis Marchesi
+title: A Norwich Pub | Louis Marchesi
 description: >-
   The Louis Marchesi is a pub offering entertainment, accommodation, great food
   and is situated in the heart of Norwich city.
