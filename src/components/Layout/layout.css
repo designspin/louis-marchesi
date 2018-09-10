@@ -64,7 +64,7 @@ html, body, #___gatsby, #___gatsby > div {
     width: 100%;
     background-color: transparent;
     color: #fff;
-    padding: 4rem 0;
+    padding: 2rem 0;
     text-align: center;
 }
 
@@ -72,8 +72,8 @@ html, body, #___gatsby, #___gatsby > div {
     display: block;
     position: relative;
     border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     margin: 0 auto;
     line-height: 1;
     padding: 1rem;

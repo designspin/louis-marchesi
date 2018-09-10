@@ -27,7 +27,7 @@ const SiteHero = ({ isPreview, fullImage, heading }) => {
             </div>
             <div className="site-hero-bottom">
                 <a className="site-hero-see-more">
-                    <FaBeer size="3rem"/>
+                    <FaBeer size="2rem"/>
                 </a>
             </div>
         </div>
@@ -47,7 +47,7 @@ const SiteHero = ({ isPreview, fullImage, heading }) => {
             </div>
             <div className="site-hero-bottom">
                 <a className="site-hero-see-more">
-                    <FaBeer size="3rem"/>
+                    <FaBeer size="2rem"/>
                 </a>
             </div>
         </div>
