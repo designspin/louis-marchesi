@@ -30,7 +30,7 @@ collections:
     label: "Room"
     folder: "src/pages/rooms/detail"
     create: true
-    slug: "{{slug}}"
+    slug: "rooms/{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "rooms-detail"}
       - {label: "Title", name: "title", widget: "string"}
