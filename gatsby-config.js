@@ -31,7 +31,12 @@ module.exports = {
         path: `${__dirname}/static/img`
       }
     },
-    `gatsby-plugin-netlify-cms-paths`,
+    {
+      resolve: `gatsby-plugin-netlify-cms-paths`,
+      options: {
+        cmsConfig: `static/admin/config.yml`
+      }
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -44,7 +49,8 @@ module.exports = {
               maxWidth: 1900,
               withWebp: true
             }
-          }
+          },
+          `gatsby-plugin-netlify-cms-paths`
         ]
       },
     },
@@ -60,8 +66,13 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      }
+    },
     'gatsby-plugin-offline',
-    `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify'
   ],
 }

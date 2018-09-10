@@ -6,13 +6,8 @@ import Img from 'gatsby-image';
 import logo from '../images/louis-marchesi-logo.png';
 import { FaBeer } from 'react-icons/fa';
 
-export const HomePageTemplate = ({
-    heading,
-    fullImage
-}) => {
-    return (
-    <div className="full-height">
-        <Header />
+const SiteHero = ({ isPreview, fullImage, heading }) => {
+    const preview = isPreview ? (
         <div className="site-hero">
             <Img className="site-hero-image"
                 alt="Louis Marchesi pub street view"
@@ -36,6 +31,40 @@ export const HomePageTemplate = ({
                 </a>
             </div>
         </div>
+    ) : (
+        <div 
+            className="site-hero"
+            style={{
+                backgroundImage: `url(${fullImage})`,
+                backgroundSize: "cover"
+            }}
+        >
+            <div className="site-hero-middle">
+                <div className="container">
+                    
+                    <h1><img src={logo} alt="Louis Marchesi"/>{ heading }</h1>
+                </div>
+            </div>
+            <div className="site-hero-bottom">
+                <a className="site-hero-see-more">
+                    <FaBeer size="3rem"/>
+                </a>
+            </div>
+        </div>
+    );
+
+    return preview;
+}
+
+export const HomePageTemplate = ({
+    isPreview,
+    heading,
+    fullImage
+}) => {
+    return (
+    <div className="full-height">
+        <Header />
+        <SiteHero isPreview={ isPreview } fullImage={ fullImage } heading={ heading } />
     </div>
     )
 }
@@ -46,6 +75,7 @@ const HomePage = ({data}) => {
     return (
         <HomeLayout>
             <HomePageTemplate
+                isPreview="false"
                 fullImage={frontmatter.full_image.childImageSharp.fluid}
                 heading={frontmatter.heading}
             />
