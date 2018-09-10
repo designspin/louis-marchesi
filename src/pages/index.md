@@ -1,0 +1,3 @@
+---
+templateKey: 'rooms-page'
+---
