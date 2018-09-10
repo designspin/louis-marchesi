@@ -28,7 +28,7 @@ collections:
               - {label: "Saturday", name: "saturday", widget: "string"}
   - name: "room"
     label: "Room"
-    folder: "src/pages/rooms"
+    folder: "src/pages/rooms/detail"
     create: true
     slug: "{{slug}}"
     fields:
