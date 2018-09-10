@@ -1,0 +1,59 @@
+backend:
+  name: test-repo
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "config"
+    label: "Settings"
+    files:
+      - file: "src/settings/index.md"
+        label: "Site Settings"
+        name: "settings"
+        fields:
+          - {label: "Phone Number", name: "phone", widget: string, default: "01603 763099"}
+          - {label: "Email Address", name: "email", widget: string, default: "lisaatkins@live.co.uk"}
+          - label: "Opening Hours"
+            name: "opening"
+            widget: "object"
+            fields:
+              - {label: "Sunday", name: "sunday", widget: "string"}
+              - {label: "Monday", name: "monday", widget: "string"}
+              - {label: "Tuesday", name: "tuesday", widget: "string"}
+              - {label: "Wednesday", name: "wednesday", widget: "string"}
+              - {label: "Thursday", name: "thursday", widget: "string"}
+              - {label: "Friday", name: "friday", widget: "string"}
+              - {label: "Saturday", name: "saturday", widget: "string"}
+  - name: "room"
+    label: "Room"
+    folder: "src/pages/rooms"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "rooms-detail"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Full Image", name: "full_image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files: 
+      - file: "src/pages/index.md"
+        label: "Louis Marchesi"
+        name: "home"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Full Image, name: full_image, widget: image }
+      - file: "src/pages/rooms/index.md"
+        label: "Rooms"
+        name: "rooms"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "rooms-page"}
+          - {label: Title, name: title, widget: string }
+          - {label: Description, name: description, widget: string }
+          - {label: Full Image, name: full_image, widget: image }
+          - {label: "Body", name: "body", widget: "markdown" }

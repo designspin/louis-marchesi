@@ -1,0 +1,156 @@
+html, body, #___gatsby, #___gatsby > div {
+    height: 100%;
+}
+
+.full-height {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 568px;
+}
+
+.site-main {
+    position: relative;
+    background-color: #fff;
+    left:0;
+    z-index: 20;
+    transition: left .5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    box-shadow: 5px 0 20px rgba(0,0,0,0.4);
+}
+
+.site-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 10;
+    background-color: #eee;
+}
+
+.site-container.site-container--nav-on .site-main {
+    left: -250px;
+}
+
+.site-page .site-hero {
+    height: 400px;
+}
+
+.site-page .site-hero::after {
+    display: none;
+}
+
+.site-hero {
+    position: relative;
+    z-index: 1;
+    flex: 1 0 auto;
+}
+.site-hero::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.site-hero-bottom {
+    position: absolute;
+    z-index: 5;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.site-hero-see-more {
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    line-height: 1;
+    padding: 1rem;
+    background-color: rgba(256,256,256,0.5);
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.site-hero-see-more svg {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.site-hero-see-more:hover {
+    background-color: #940000;
+    color: #E2B122;
+}
+
+.site-hero-middle {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.site-hero-middle h1 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: #fff;
+    width: 70%;
+}
+
+.site-hero-middle h1 img {
+    display: block;
+    width: 70%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.page-title {
+    border-bottom: 4px solid #940000;
+}
+
+
+
+@media(min-width: 576px) {
+    .site-hero-middle h1 {
+        font-size: 3rem;
+    }
+}
+
+@media(min-width: 768px) {
+    .site-sidebar {
+        width: 350px;
+    }
+    .site-container.site-container--nav-on .site-main {
+        left: -350px;
+    }
+}
+
+@media(min-width: 992px) {
+    .site-container.site-container--nav-on .site-main {
+        left: 0;
+    }
+}
