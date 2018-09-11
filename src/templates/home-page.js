@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { HomeLayout } from '../components/Layout';
+import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Img from 'gatsby-image';
 import logo from '../images/louis-marchesi-logo.png';
@@ -74,13 +74,13 @@ const HomePage = ({data}) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <HomeLayout>
+        <Layout templateKey={frontmatter.templateKey}>
             <HomePageTemplate
                 isPreview="false"
                 fullImage={frontmatter.full_image.childImageSharp.fluid}
                 heading={frontmatter.heading}
             />
-        </HomeLayout>
+        </Layout>
     )
 }
 
@@ -90,6 +90,7 @@ export const homePageQuery = graphql`
  query HomePage($id: String!) {
      markdownRemark(id: { eq: $id }) {
          frontmatter {
+             templateKey
              heading
              full_image {
                  childImageSharp {

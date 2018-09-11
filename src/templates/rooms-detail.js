@@ -39,9 +39,9 @@ const RoomsDetailPage = ({data}) => {
     
     const { markdownRemark: post } = data;
     const { rooms } = data;
-    console.log(post);
+    
     return (
-        <Layout>
+        <Layout templateKey={post.frontmatter.templateKey}>
             <RoomsDetailPageTemplate
                 content={post.html}
                 contentComponent={HTMLContent}
@@ -53,7 +53,6 @@ const RoomsDetailPage = ({data}) => {
                     <div className="row justify-content-center">
                     {
                         rooms.edges.map(room => {
-                            console.log(room);
                             const fullImage = room.node.frontmatter.full_image.childImageSharp.fluid;
                             return (
                                 <div key={room.node.id} className="col-md-4">
@@ -82,6 +81,7 @@ export const RoomsDetailPageQuery = graphql`
         html
         frontmatter {
              title
+             templateKey
              full_image {
                 childImageSharp {
                     fluid(maxWidth: 1900) {

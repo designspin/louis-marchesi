@@ -45,7 +45,7 @@ const RoomsPage = ({data}) => {
     const { rooms } = data;
     
     return (
-        <Layout>
+        <Layout templateKey={post.frontmatter.templateKey}>
             <RoomsPageTemplate
                 content={post.html}
                 contentComponent={HTMLContent}
@@ -86,6 +86,7 @@ export const RoomsPageQuery = graphql`
         html
         frontmatter {
              title
+             templateKey
              full_image {
                 childImageSharp {
                     fluid(maxWidth: 1900) {
