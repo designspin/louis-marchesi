@@ -28,6 +28,33 @@ collections:
               - {label: "Thursday", name: "thursday", widget: "string"}
               - {label: "Friday", name: "friday", widget: "string"}
               - {label: "Saturday", name: "saturday", widget: "string"}
+  - name: "menu"
+    label: "Menu"
+    folder: "src/pages/menu"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "menu-detail"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Full Image", name: "full_image", widget: "image"}
+      - label: "Menu Section"
+        name: "section"
+        widget: "list"
+        fields:
+          - {label: "Section Title", name: "sectionTitle", widget: "string"}
+          - {label: "Section Notes", name: "sectionNotes", widget: "text"}
+          - label: "Section Items"
+            name: "sectionItems"
+            widget: "list"
+            fields:
+              - label: "Menu Item"
+                name: "menuItem"
+                widget: "object"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Price", name: "price", widget: "text"}
   - name: "room"
     label: "Room"
     folder: "src/pages/rooms"
