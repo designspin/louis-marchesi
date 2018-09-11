@@ -6,7 +6,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { StaticQuery, graphql } from 'gatsby';
 
-export const LayoutQuery = graphql`
+const LayoutQuery = graphql`
   query LayoutQuery {
       markdownRemark(fileAbsolutePath: {regex: "/(settings)/"}) {
           frontmatter {
