@@ -1,6 +1,6 @@
 ---
 templateKey: rooms-detail
-title: The Upstairs
+title: The Upstairs Function Room
 description: >-
   The upstairs function room at Louis Marchesi, is really suited to parties. We
   have seating and plenty of room for a disco.
