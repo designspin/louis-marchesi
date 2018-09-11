@@ -21,10 +21,10 @@ const Header = (props) => {
             <nav className="site-navbar d-none d-lg-block">
                 <ul className="container">
                     <li className="site-navbar-item">
-                        <a href="#"><small>Sample</small>Menus</a>
+                        <a href="#"><small>Great</small>Food</a>
                     </li>
                     <li className="site-navbar-item">
-                        <Link activeClassName="active" to="/rooms"><small>Our</small>Rooms</Link>
+                        <Link activeClassName="active" to="/rooms"><small>Function</small>Rooms</Link>
                     </li>
                     <li className="site-navbar-item">
                         <a href="#"><small>Our</small>Accomodation</a>

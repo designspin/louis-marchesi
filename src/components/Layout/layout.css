@@ -127,6 +127,10 @@ html, body, #___gatsby, #___gatsby > div {
     padding-top: 2rem;
 }
 
+.section.section--red {
+    background-color: #fafafa;
+}
+
 .page-title {
     border-bottom: 4px solid #940000;
 }
