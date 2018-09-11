@@ -1,8 +1,9 @@
 ---
-templateKey: 'rooms-page'
-title: Rooms at the Louis Marchesi
-description: >- 
-  The Louis Marchesi has various rooms and spaces available for hire, so if you're in need of a space for a party or function, get in touch.
+templateKey: rooms-page
+title: Function Rooms at the Louis Marchesi
+description: >-
+  The Louis Marchesi has various rooms and spaces available for hire, so if
+  you're in need of a space for a party or function, get in touch.
 full_image: /img/rooms-party.jpg
 ---
 
