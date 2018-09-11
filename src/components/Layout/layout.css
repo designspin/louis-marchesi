@@ -54,7 +54,7 @@ html, body, #___gatsby, #___gatsby > div {
     right: 0;
     bottom: 0;
     content: '';
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .site-hero-bottom {
     position: absolute;
@@ -125,7 +125,6 @@ html, body, #___gatsby, #___gatsby > div {
 
 .section {
     padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 
 .page-title {

@@ -2,6 +2,7 @@ import React from 'react';
 import './header.css';
 import logo from '../../images/louis-marchesi-logo.jpg';
 import NavToggle from './nav-toggle';
+import { Link } from 'gatsby';
 
 const Header = (props) => {
     return (
@@ -9,7 +10,7 @@ const Header = (props) => {
             <div className="container">
                 <div className="row align-items-center ">
                     <div className="col-auto">
-                        <img className="site-logo" src={logo} alt="Louis Marchesi" />
+                        <Link to="/"><img className="site-logo" src={logo} alt="Louis Marchesi" /></Link>
                     </div>
                     <div className="col-auto ml-md-auto">
                         <a href="tel:01603 763099">01603 763099</a>
@@ -23,7 +24,7 @@ const Header = (props) => {
                         <a href="#"><small>Sample</small>Menus</a>
                     </li>
                     <li className="site-navbar-item">
-                        <a href="#"><small>Our</small>Rooms</a>
+                        <Link activeClassName="active" to="/rooms"><small>Our</small>Rooms</Link>
                     </li>
                     <li className="site-navbar-item">
                         <a href="#"><small>Our</small>Accomodation</a>

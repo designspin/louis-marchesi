@@ -67,6 +67,6 @@ export const RoomsDetailPageQuery = graphql`
                 }
             }
          }
-     }
+     } 
  }
 `;

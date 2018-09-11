@@ -27,8 +27,12 @@ export const RoomsPageTemplate = ({
                 }} />
             </div>
             <section className="section container">
-                <h1 className="page-title">{title}</h1>
-                <PostContent content={content} />        
+                <div className="row">
+                    <div className="col-12">
+                        <h1 className="page-title">{title}</h1>
+                        <PostContent content={content} />
+                    </div>
+                </div>        
             </section>
         </div>
     )
@@ -37,7 +41,8 @@ export const RoomsPageTemplate = ({
 const RoomsPage = ({data}) => {
     
     const { markdownRemark: post } = data;
-    console.log(post);
+    const { rooms } = data;
+    
     return (
         <Layout>
             <RoomsPageTemplate
@@ -46,6 +51,20 @@ const RoomsPage = ({data}) => {
                 title={post.frontmatter.title}
                 fullImage={post.frontmatter.full_image.childImageSharp.fluid}
             />
+            <section className="section container">
+                <div className="row">
+                {
+                    rooms.edges.map(room => {
+                        return (
+                            <div key={room.node.id} className="col-4">
+                            <h4>{room.node.frontmatter.title}</h4>
+                            <p>{room.node.excerpt}</p>
+                            </div>
+                        )
+                    })
+                }
+                </div>
+            </section>
         </Layout>
     );
 };
@@ -66,6 +85,30 @@ export const RoomsPageQuery = graphql`
                     }
                 }
             }
+         }
+     }
+     rooms: allMarkdownRemark(
+         sort: { order: DESC, fields: [frontmatter___title]}
+         filter: { frontmatter: { templateKey: { eq: "rooms-detail" }}}
+     ) {
+         edges {
+             node {
+                 excerpt(pruneLength: 149)
+                 id
+                 fields {
+                     slug
+                 }
+                 frontmatter {
+                     title
+                     full_image {
+                        childImageSharp {
+                            fluid(maxWidth: 600) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                     }
+                 }
+             }
          }
      }
  }
