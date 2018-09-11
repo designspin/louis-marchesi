@@ -13,7 +13,7 @@ const Header = (props) => {
                         <Link to="/"><img className="site-logo" src={logo} alt="Louis Marchesi" /></Link>
                     </div>
                     <div className="col-auto ml-md-auto">
-                        <a href="tel:01603 763099">01603 763099</a>
+                        <a href={`tel:${props.phone}`}>{props.phone}</a>
                     </div>
                     <NavToggle className="ml-auto d-lg-none" />
                 </div>

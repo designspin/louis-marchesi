@@ -1,4 +1,5 @@
 ---
+key: settings
 phone: 01603 763099
 email: lisaatkins@live.co.uk
 opening:

@@ -1,0 +1,34 @@
+.site-footer {
+    font-size: 14px;
+    padding: 2rem 0;
+    background-color: #444;
+    color: white;
+}
+
+.opening-hours {
+    list-style: none;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.opening-hours li {
+    margin: 0;
+    padding: 3px 0;
+    border-bottom: 1px solid #555;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.opening-hours li:last-child {
+    border-bottom: none;
+}
+
+.opening-hours li:first-child {
+    border-top: none;
+}
+
+.opening-hours-day {
+    margin-right: 1rem;
+}

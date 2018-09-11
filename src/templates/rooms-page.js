@@ -54,13 +54,13 @@ const RoomsPage = ({data}) => {
             />
             <section className="section section--red">
                 <div className="container">
-                    <div className="row">
+                    <div className="row justify-content-center">
                     {
                         rooms.edges.map(room => {
-                            console.log(room);
+                            
                             const fullImage = room.node.frontmatter.full_image.childImageSharp.fluid;
                             return (
-                                <div key={room.node.id} className="col-md-6 col-lg-4">
+                                <div key={room.node.id} className="col-md-4">
                                     <Card 
                                         imageFull={fullImage} 
                                         title={room.node.frontmatter.title}

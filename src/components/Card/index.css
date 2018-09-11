@@ -1,13 +1,22 @@
 .card {
     position: relative;
+    display: flex;
+    flex-direction: column;
     z-index: 2;
     overflow: hidden;
     font-size: 90%;
     border: 1px solid #bbb;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0 1rem 1rem 1rem;
     background-color: #f9f9f9;
 }
@@ -18,14 +27,14 @@
     margin-left: -1rem;
     margin-right: -1rem;
     margin-bottom: .5rem;
-    padding: .5rem 1rem;
+    padding: .2rem 1rem;
     transition: all .3s ease-in-out;
 }
 
 .card-title h3 {
     font-size: 112.5%;
     text-transform: capitalize;
-    line-height: 1;
+    line-height: 1.2;
     margin: 0;
 }
 
@@ -49,6 +58,7 @@
 
 .card-btn {
     display: inline-block;
+    align-self: flex-start;
     background-color: #444;
     color: #E2B122;
     
@@ -65,4 +75,11 @@
 .card-excerpt {
     margin-top: 1rem;
     margin-bottom: 5px;
+}
+
+@media(min-width: 768px) {
+    .card {
+        height: 100%;
+        margin-bottom: 0;
+    }
 }

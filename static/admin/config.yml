@@ -14,6 +14,7 @@ collections:
         label: "Site Settings"
         name: "settings"
         fields:
+          - {label: "Key", name: "key", widget: "hidden", default: "settings"}
           - {label: "Phone Number", name: "phone", widget: string, default: "01603 763099"}
           - {label: "Email Address", name: "email", widget: string, default: "lisaatkins@live.co.uk"}
           - label: "Opening Hours"

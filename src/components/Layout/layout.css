@@ -125,6 +125,11 @@ html, body, #___gatsby, #___gatsby > div {
 
 .section {
     padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.section > *:last-child {
+    margin-bottom: 0;
 }
 
 .section.section--red {

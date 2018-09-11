@@ -59,11 +59,12 @@ const SiteHero = ({ isPreview, fullImage, heading }) => {
 export const HomePageTemplate = ({
     isPreview,
     heading,
-    fullImage
+    fullImage,
+    ...props
 }) => {
     return (
     <div className="full-height">
-        <Header />
+        <Header phone={props.phone}/>
         <SiteHero isPreview={ isPreview } fullImage={ fullImage } heading={ heading } />
     </div>
     )

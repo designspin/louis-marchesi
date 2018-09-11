@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import Card from '../components/Card';
 import Content, { HTMLContent } from '../components/Content';
 import Img from 'gatsby-image';
 
@@ -37,6 +38,7 @@ export const RoomsDetailPageTemplate = ({
 const RoomsDetailPage = ({data}) => {
     
     const { markdownRemark: post } = data;
+    const { rooms } = data;
     console.log(post);
     return (
         <Layout>
@@ -46,6 +48,27 @@ const RoomsDetailPage = ({data}) => {
                 title={post.frontmatter.title}
                 fullImage={post.frontmatter.full_image.childImageSharp.fluid}
             />
+            <section className="section section--red">
+                <div className="container">
+                    <div className="row justify-content-center">
+                    {
+                        rooms.edges.map(room => {
+                            console.log(room);
+                            const fullImage = room.node.frontmatter.full_image.childImageSharp.fluid;
+                            return (
+                                <div key={room.node.id} className="col-md-4">
+                                    <Card 
+                                        imageFull={fullImage} 
+                                        title={room.node.frontmatter.title}
+                                        excerpt={room.node.excerpt}
+                                        slug={room.node.fields.slug} />
+                                </div>
+                            )
+                        })
+                    }
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };
@@ -67,6 +90,35 @@ export const RoomsDetailPageQuery = graphql`
                 }
             }
          }
-     } 
+     }
+     rooms: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___title]}
+        filter: {
+            id: { ne: $id } 
+            frontmatter: { 
+                templateKey: { eq: "rooms-detail" }
+            }
+        }
+    ) {
+        edges {
+            node {
+                excerpt(pruneLength: 149)
+                id
+                fields {
+                    slug
+                }
+                frontmatter {
+                    title
+                    full_image {
+                       childImageSharp {
+                           fluid(maxWidth: 600) {
+                               ...GatsbyImageSharpFluid
+                           }
+                       }
+                    }
+                }
+            }
+        }
+    }
  }
 `;
