@@ -2,10 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Img from 'gatsby-image';
+import Content, { HTMLContent } from '../components/Content';
+import './menu-detail.css';
 
+const MenuPageTemplate = ({ 
+    content,
+    contentComponent,
+    title, 
+    fullImage, 
+    sections 
+}) => {
+    const PostContent = contentComponent || Content;
 
-const MenuPageTemplate = ({ title, fullImage, sections }) => {
-    console.log(sections);
     return (
         <div className="site-page">
             <div className="site-hero">
@@ -24,6 +32,35 @@ const MenuPageTemplate = ({ title, fullImage, sections }) => {
                 <div className="row">
                     <div className="col-12">
                         <h1 className="page-title">{title}</h1>
+                        <PostContent content={content} /> 
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 food-menu">
+                        {sections.map(section => {
+                            return (
+                                <div className="food-menu-section">
+                                    <h3>{section.sectionTitle}</h3>
+                                    {section.sectionNotes && 
+                                        <p className="food-menu-section-notes">{section.sectionNotes}</p>
+                                    }
+                                    <ul className="food-menu-list">
+                                        {section.sectionItems.map(item => {
+                                            console.log(item);
+                                            return (
+                                                <li className="food-menu-list-item">
+                                                    <div>
+                                                        <h4>{item.menuItem.title}</h4>
+                                                        <span>{item.menuItem.price}</span>
+                                                    </div>
+                                                    <p>{item.menuItem.description}</p>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>        
             </section>
@@ -39,6 +76,8 @@ const MenuPage = ({data}) => {
         <Layout templateKey={post.frontmatter.templateKey}>
             <MenuPageTemplate
                 title={post.frontmatter.title}
+                content={post.html}
+                contentComponent={HTMLContent}
                 fullImage={post.frontmatter.full_image.childImageSharp.fluid}
                 sections={post.frontmatter.section}
             />
@@ -52,6 +91,7 @@ export const MenuDetailQuery = graphql`
  query MenuDetail($id: String!) {
      markdownRemark(id: { eq: $id }) {
         id
+        html
         frontmatter {
              title
              templateKey
@@ -65,6 +105,7 @@ export const MenuDetailQuery = graphql`
             }
             section {
                 sectionTitle
+                sectionNotes
                 sectionItems {
                     menuItem {
                         title
