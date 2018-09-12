@@ -70,6 +70,25 @@ section:
     sectionTitle: 'Sharers, Starters and Light Meals'
   - sectionItems:
       - menuItem:
+          title: Margherita
+          description: 'Tomato sauce, mozzarella and cheddar cheese'
+          price: £5.50
+      - menuItem:
+          title: Deli Meat Pizza
+          description: >-
+            Tomato sauce, salami, pepperoni and smoked ham, with mozzarella and
+            cheddar cheese
+          price: £7.50
+      - menuItem:
+          title: Vegetarian Pizza
+          description: >-
+            Roasted Mediterranean vegetables and mushrooms with mozzarella and
+            cheddar cheese
+          price: £6.50
+    sectionNotes: 9" Pizzas
+    sectionTitle: Pizzas
+  - sectionItems:
+      - menuItem:
           title: Ox Cheek and Vegetable Stew
           description: 'With new potatoes, fresh British ox cheek'
           price: £10.00
@@ -118,24 +137,5 @@ section:
           description: Fresh shaved parmesan and tomato ragu
           price: £9.00
     sectionTitle: Mains
-  - sectionItems:
-      - menuItem:
-          title: Margherita
-          description: 'Tomato sauce, mozzarella and cheddar cheese'
-          price: £5.50
-      - menuItem:
-          title: Deli Meat Pizza
-          description: >-
-            Tomato sauce, salami, pepperoni and smoked ham, with mozzarella and
-            cheddar cheese
-          price: £7.50
-      - menuItem:
-          title: Vegetarian Pizza
-          description: >-
-            Roasted Mediterranean vegetables and mushrooms with mozzarella and
-            cheddar cheese
-          price: £6.50
-    sectionNotes: 9" Pizzas
-    sectionTitle: Pizzas
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec quam in leo lobortis pharetra. Vestibulum eget ultrices dolor, in tincidunt arcu. Sed ut felis varius, elementum nibh ornare, lacinia odio. Fusce pulvinar ut metus sed convallis. Donec tempus sem ac leo egestas posuere. In rutrum nisi velit, consectetur pharetra enim pellentesque quis. In euismod sit amet felis sed mattis. Nunc congue commodo euismod. Donec id ultrices est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin auctor eleifend enim et porttitor. Sed fermentum lectus a pellentesque dignissim. Nunc risus felis, bibendum eget tempor interdum, faucibus congue odio. Integer sit amet quam sed purus pretium scelerisque. Vivamus sodales aliquam orci, non egestas mauris molestie eget. Mauris vitae posuere urna.
