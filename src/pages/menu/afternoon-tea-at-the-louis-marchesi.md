@@ -1,6 +1,6 @@
 ---
 templateKey: menu-detail
-title: Afternoon Tea at the Louis Marchesi
+title: Afternoon Tea
 description: Afternoon Tea at the Louis Marchesi
 full_image: /img/afternoon_tea.jpg
 section:
