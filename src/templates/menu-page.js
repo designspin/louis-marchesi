@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import Img from 'gatsby-image';
-import { Link } from '@reach/router';
+import { Link } from 'gatsby';
 import './menu-page.css';
 
 export const FoodPageTemplate = ({
