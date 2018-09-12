@@ -48,7 +48,10 @@ const RoomsDetailPage = ({data}) => {
                 title={post.frontmatter.title}
                 fullImage={post.frontmatter.full_image.childImageSharp.fluid}
             />
-            <section className="section section--red">
+            <section className="section section--functions">
+                <div className="section-title">
+                    <h2 className="container">More space for your event</h2>
+                </div>
                 <div className="container">
                     <div className="row justify-content-center">
                     {

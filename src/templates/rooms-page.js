@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Card from '../components/Card';
 import Content, { HTMLContent } from '../components/Content';
 import Img from 'gatsby-image';
+import './rooms-page.css';
 
 export const RoomsPageTemplate = ({
     content,
@@ -52,7 +53,10 @@ const RoomsPage = ({data}) => {
                 title={post.frontmatter.title}
                 fullImage={post.frontmatter.full_image.childImageSharp.fluid}
             />
-            <section className="section section--red">
+            <aside className="section section--functions">
+                <div className="section-title">
+                    <h2 className="container">Space for your event</h2>
+                </div>
                 <div className="container">
                     <div className="row justify-content-center">
                     {
@@ -72,7 +76,7 @@ const RoomsPage = ({data}) => {
                     }
                     </div>
                 </div>
-            </section>
+            </aside>
         </Layout>
     );
 };
