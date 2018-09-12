@@ -44,7 +44,7 @@ export const FoodPageTemplate = ({
                 <h2 className="container">Hungry? Take A Look At Our Menus</h2>
             </div>
             <div className="container">
-                <div className="row">
+                <div className="row justify-content-center">
                     {menus.edges.map(menu => {
                         return (
                             <div className="col-md-4">
