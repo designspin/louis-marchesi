@@ -51,7 +51,9 @@ section:
           price: £4.00
       - menuItem:
           title: Sharing Platter
-          description: Hummus, marinated olives, roasted Mediterranean vegetables with pitta bread and crostini
+          description: >-
+            Hummus, marinated olives, roasted Mediterranean vegetables with
+            pitta bread and crostini
           price: £10.00
       - menuItem:
           title: Hummus & Pitta Bread
@@ -66,5 +68,73 @@ section:
           description: Homestyle chunky chips
           price: £3.00
     sectionTitle: 'Sharers, Starters and Light Meals'
+  - sectionItems:
+      - menuItem:
+          title: Ox Cheek and Vegetable Stew
+          description: 'With new potatoes, fresh British ox cheek'
+          price: £10.00
+      - menuItem:
+          title: Cannelloni
+          description: |-
+            Stuffed with spinach and ricotta cheese,
+            topped with Napoli sauce and mozzarella cheese
+          price: £9.00
+      - menuItem:
+          title: Chargrilled Rib-Eye of Beef
+          description: >-
+            10oz rib-eye steak, served with hand-cut chunky chips, salad garnish
+            and peppercorn sauce
+          price: £18.00
+      - menuItem:
+          title: Pan-Fried Breast of Chicken
+          description: >-
+            Honey and smoked paprika marinade served with crushed new potatoes
+            and a tomato and red pepper coulis
+          price: £9.50
+      - menuItem:
+          title: Roasted Salmon Supreme
+          description: >-
+            Served with crushed new potatoes and a creamy mustard-dill and leek
+            sauce
+          price: £11.00
+      - menuItem:
+          title: Venison Sausages
+          description: Creamy mash and red wine onion gravy
+          price: £9.00
+      - menuItem:
+          title: Crab / Tiger Prawn Linguine
+          description: 'Chilli, garlic, lemon and parsley'
+          price: £12.00
+      - menuItem:
+          title: Roasted Monkfish Fillet / Tiger Prawns
+          description: 'Basmati rice, sweet chilli and coconut cream sauce'
+          price: £14.00
+      - menuItem:
+          title: Arabic Spiced Lamb Burger
+          description: 'Beetroot, tzatziki and hand-cut chunky chips'
+          price: £9.00
+      - menuItem:
+          title: 'Roasted Stuffed Sweet Pepper, Vegetable Risotto'
+          description: Fresh shaved parmesan and tomato ragu
+          price: £9.00
+    sectionTitle: Mains
+  - sectionItems:
+      - menuItem:
+          title: Margherita
+          description: 'Tomato sauce, mozzarella and cheddar cheese'
+          price: £5.50
+      - menuItem:
+          title: Deli Meat Pizza
+          description: >-
+            Tomato sauce, salami, pepperoni and smoked ham, with mozzarella and
+            cheddar cheese
+          price: £7.50
+      - menuItem:
+          title: Vegetarian Pizza
+          description: >-
+            Roasted Mediterranean vegetables and mushrooms with mozzarella and
+            cheddar cheese
+          price: £6.50
+    sectionTitle: Pizzas
 ---
 
