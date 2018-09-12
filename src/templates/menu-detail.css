@@ -6,7 +6,7 @@
 }
 
 .food-menu-section {
-    display: block;
+    display: inline-block;
     background-color: #fcfcfc;
     margin-bottom: 1rem;
     padding: 1rem .5rem;
