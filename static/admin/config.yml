@@ -89,11 +89,11 @@ collections:
           - {label: Description, name: description, widget: string }
           - {label: Full Image, name: full_image, widget: image }
           - {label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/food.md"
-        label: "Food"
-        name: "food"
+      - file: "src/pages/menu.md"
+        label: "Menus"
+        name: "menus"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "food-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "menu-page"}
           - {label: Title, name: title, widget: string }
           - {label: Description, name: description, widget: string }
           - {label: Full Image, name: full_image, widget: image }

@@ -21,7 +21,7 @@ const Header = (props) => {
             <nav className="site-navbar d-none d-lg-block">
                 <ul className="container">
                     <li className="site-navbar-item">
-                        <Link activeClassName="active" to="/food"><small>Great</small>Food</Link>
+                        <Link activeClassName="active" to="/menu"><small>Great</small>Food</Link>
                     </li>
                     <li className="site-navbar-item">
                         <Link activeClassName="active" to="/rooms"><small>Function</small>Rooms</Link>

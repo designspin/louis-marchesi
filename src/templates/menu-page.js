@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import Img from 'gatsby-image';
 import { Link } from '@reach/router';
-import './food-page.css';
+import './menu-page.css';
 
 export const FoodPageTemplate = ({
     content,
@@ -45,9 +45,9 @@ export const FoodPageTemplate = ({
             </div>
             <div className="container">
                 <div className="row justify-content-center">
-                    {menus.edges.map(menu => {
+                    {menus.edges.map((menu, menuIndex) => {
                         return (
-                            <div className="col-md-4">
+                            <div key={`menu-${menuIndex}`} className="col-md-4">
                                 <Link className="menu-link" to={menu.node.fields.slug}>
                                     <div className="menu-link-inner">
                                         <svg viewBox="0 0 32 32">
@@ -87,7 +87,7 @@ const FoodPage = ({data}) => {
 export default FoodPage;
 
 export const FoodPageQuery = graphql`
- query FoodPage($id: String!) {
+ query MenuPage($id: String!) {
      markdownRemark(id: { eq: $id }) {
         id
         html

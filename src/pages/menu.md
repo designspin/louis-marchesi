@@ -1,5 +1,5 @@
 ---
-templateKey: food-page
+templateKey: menu-page
 title: Food At Louis Marchesi
 description: We serve delicious food all week.
 full_image: /img/steak-and-chips.jpg
