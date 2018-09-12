@@ -41,7 +41,6 @@ export const FoodPageTemplate = ({
 const FoodPage = ({data}) => {
     
     const { markdownRemark: post } = data;
-    const { rooms } = data;
     
     return (
         <Layout templateKey={post.frontmatter.templateKey}>
