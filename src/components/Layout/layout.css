@@ -136,8 +136,20 @@ html, body, #___gatsby, #___gatsby > div {
     background-color: #fafafa;
 }
 
+.section.section--black {
+    background-color: rgb(252, 236, 186);
+
+ }
+
+
+
 .page-title {
     border-bottom: 4px solid #940000;
+}
+
+.widget-title {
+    background-color: #444;
+    color: #E2B122;
 }
 
 

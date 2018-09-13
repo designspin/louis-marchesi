@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import Img from 'gatsby-image';
 import logo from '../images/louis-marchesi-logo.png';
 import { FaBeer } from 'react-icons/fa';
+import FBEvents from '../components/FB/events';
+import GoogleMap from '../components/GoogleMap/googlemap';
 
 const SiteHero = ({ isPreview, fullImage, heading }) => {
     const preview = isPreview ? (
@@ -63,10 +65,24 @@ export const HomePageTemplate = ({
     ...props
 }) => {
     return (
-    <div className="full-height">
-        <Header phone={props.phone}/>
-        <SiteHero isPreview={ isPreview } fullImage={ fullImage } heading={ heading } />
-    </div>
+    <>
+        <div className="full-height">
+            <Header phone={props.phone}/>
+            <SiteHero isPreview={ isPreview } fullImage={ fullImage } heading={ heading } />
+        </div>
+        <section className="section section--red">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-7">
+                        <GoogleMap />
+                    </div>
+                    <div className="col-md-5">
+                        <FBEvents />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </>
     )
 }
 
