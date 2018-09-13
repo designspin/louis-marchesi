@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import 'bootstrap-4-grid';
 import './layout.css';
-import Header from '../Header';
+import Header, { HeaderNavLinks } from '../Header';
 import Footer from '../Footer';
 import { StaticQuery, graphql } from 'gatsby';
 
@@ -34,7 +34,9 @@ const Layout = ({ children, data, ...props}) =>
             <Footer opening={ data.opening }/>
         </div>
         <div className="site-sidebar">
-            Sidebar!
+            <ul>
+                <HeaderNavLinks />
+            </ul>
         </div>
     </div>
 
@@ -47,7 +49,9 @@ const LayoutAlt = ({ children, data, ...props}) =>
             <Footer opening={data.opening}/>
         </div>
         <div className="site-sidebar">
-            Sidebar!
+            <ul>
+                <HeaderNavLinks />
+            </ul>
         </div>
     </div>
 

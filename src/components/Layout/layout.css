@@ -29,6 +29,20 @@ html, body, #___gatsby, #___gatsby > div {
     background-color: #eee;
 }
 
+.site-sidebar ul {
+    margin: 0;
+}
+
+.site-page ul .site-navbar-item {
+    border-left: none;
+    border-right: none;
+} 
+
+.site-sidebar ul .site-navbar-item a {
+    border-left: none;
+    border-right: none;
+}
+
 .site-container.site-container--nav-on .site-main {
     left: -250px;
 }

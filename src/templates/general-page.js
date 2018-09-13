@@ -64,6 +64,7 @@ export const GeneralDetailQuery = graphql`
         id
         html
         frontmatter {
+            templateKey
              title
              description
              full_image {

@@ -4,6 +4,25 @@ import logo from '../../images/louis-marchesi-logo.jpg';
 import NavToggle from './nav-toggle';
 import { Link } from 'gatsby';
 
+export const HeaderNavLinks = () =>
+    <>
+        <li className="site-navbar-item">
+            <Link activeClassName="active" to="/about"><small>Louis Marchesi</small>About</Link>
+        </li>
+        <li className="site-navbar-item">
+            <Link activeClassName="active" to="/menu"><small>Great</small>Food</Link>
+        </li>
+        <li className="site-navbar-item">
+            <Link activeClassName="active" to="/rooms"><small>Function</small>Rooms</Link>
+        </li>
+        <li className="site-navbar-item">
+            <a href="#"><small>Our</small>Accomodation</a>
+        </li>
+        <li className="site-navbar-item">
+            <a href="#"><small>How To</small>Contact</a>
+        </li>
+    </>
+
 const Header = (props) => {
     return (
         <header className="site-header">
@@ -20,21 +39,7 @@ const Header = (props) => {
             </div>
             <nav className="site-navbar d-none d-lg-block">
                 <ul className="container">
-                    <li className="site-navbar-item">
-                        <Link activeClassName="active" to="/about"><small>Louis Marchesi</small>About</Link>
-                    </li>
-                    <li className="site-navbar-item">
-                        <Link activeClassName="active" to="/menu"><small>Great</small>Food</Link>
-                    </li>
-                    <li className="site-navbar-item">
-                        <Link activeClassName="active" to="/rooms"><small>Function</small>Rooms</Link>
-                    </li>
-                    <li className="site-navbar-item">
-                        <a href="#"><small>Our</small>Accomodation</a>
-                    </li>
-                    <li className="site-navbar-item">
-                        <a href="#"><small>How To</small>Contact</a>
-                    </li>
+                    <HeaderNavLinks />
                 </ul>
             </nav>
         </header>
