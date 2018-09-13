@@ -292,6 +292,10 @@ html, body, #___gatsby, #___gatsby > div {
 }
 
 @media(min-width: 768px) {
+    .site-page .site-hero {
+        height: 600px;
+    }
+
     .site-sidebar {
         width: 350px;
     }

@@ -5,7 +5,6 @@ import Content, { HTMLContent } from '../components/Content';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
-
 export const FoodPageTemplate = ({
     content,
     contentComponent,
