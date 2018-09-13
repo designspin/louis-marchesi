@@ -4,7 +4,6 @@ import Layout from '../components/Layout';
 import Card from '../components/Card';
 import Content, { HTMLContent } from '../components/Content';
 import Img from 'gatsby-image';
-import './rooms-page.css';
 
 export const RoomsPageTemplate = ({
     content,
