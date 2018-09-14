@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Img from 'gatsby-image';
 import Content, { HTMLContent } from '../components/Content';
 
-const GeneralPageTemplate = ({ 
+export const GeneralPageTemplate = ({ 
     content,
     contentComponent,
     title, 

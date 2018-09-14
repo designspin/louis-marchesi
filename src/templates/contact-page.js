@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Img from 'gatsby-image';
 import Content, { HTMLContent } from '../components/Content';
 
-const ContactPageTemplate = ({ 
+export const ContactPageTemplate = ({ 
     content,
     contentComponent,
     title, 
@@ -60,7 +60,7 @@ const ContactPage = ({data}) => {
 
 export default ContactPage;
 
-export const GontactDetailQuery = graphql`
+export const ContactDetailQuery = graphql`
  query ContactDetail($id: String!) {
      markdownRemark(id: { eq: $id }) {
         id

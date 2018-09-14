@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import Content, { HTMLContent } from '../components/Content';
 import { Link } from 'gatsby';
 
-const MenuPageTemplate = ({ 
+export const MenuPageTemplate = ({ 
     content,
     contentComponent,
     title, 
