@@ -43,7 +43,11 @@ const GeneralPage = ({data}) => {
     const { markdownRemark: post } = data;
 
     return (
-        <Layout templateKey={post.frontmatter.templateKey}>
+        <Layout 
+            templateKey={post.frontmatter.templateKey} 
+            title={post.frontmatter.title}
+            description={post.frontmatter.description} 
+            >
             <GeneralPageTemplate
                 title={post.frontmatter.title}
                 content={post.html}

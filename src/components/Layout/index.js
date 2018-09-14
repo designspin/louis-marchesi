@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import { connect } from 'react-redux';
 import 'bootstrap-4-grid';
 import './layout.css';
@@ -26,7 +27,15 @@ const LayoutQuery = graphql`
   }  
 `;
 
-const Layout = ({ children, data, ...props}) => 
+const Meta = ({ title, description }) =>
+  <Helmet>
+      <title>{title} | Louis Marchesi</title>
+      <meta name="description" content={description} />
+  </Helmet>
+
+const Layout = ({ children, data, title, description, ...props}) =>
+<>
+    <Meta title={title} description={description} />
     <div className={`site-container site-page ${props.navOpen ? 'site-container--nav-on' : ''}`}>
         <div className="site-main">
             <Header phone={ data.phone }/>
@@ -39,8 +48,11 @@ const Layout = ({ children, data, ...props}) =>
             </ul>
         </div>
     </div>
+</>
 
-const LayoutAlt = ({ children, data, ...props}) =>
+const LayoutAlt = ({ children, data, title, description, ...props}) =>
+<>
+    <Meta title={title} description={description} />
     <div className={`site-container ${props.navOpen ? 'site-container--nav-on' : ''}`}>
         <div className="site-main">
             { React.Children.map(children, child => {
@@ -54,6 +66,7 @@ const LayoutAlt = ({ children, data, ...props}) =>
             </ul>
         </div>
     </div>
+</>
 
 const LayoutComponent = (props) =>
   <StaticQuery

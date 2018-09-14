@@ -106,7 +106,11 @@ const HomePage = ({data}) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout templateKey={frontmatter.templateKey}>
+        <Layout 
+            templateKey={frontmatter.templateKey} 
+            title={frontmatter.title}
+            description={frontmatter.description} 
+            >
             <HomePageTemplate
                 isPreview="false"
                 fullImage={frontmatter.full_image.childImageSharp.fluid}
@@ -127,6 +131,7 @@ export const homePageQuery = graphql`
         html 
         frontmatter {
              title
+             description
              templateKey
              heading
              full_image {

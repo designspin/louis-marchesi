@@ -69,7 +69,11 @@ const FoodPage = ({data}) => {
     const { markdownRemark: post } = data;
     const { menus } = data;
     return (
-        <Layout templateKey={post.frontmatter.templateKey}>
+        <Layout 
+            templateKey={post.frontmatter.templateKey} 
+            title={post.frontmatter.title}
+            description={post.frontmatter.description} 
+            >
             <FoodPageTemplate
                 content={post.html}
                 contentComponent={HTMLContent}
@@ -93,6 +97,7 @@ export const FoodPageQuery = graphql`
         }
         frontmatter {
              title
+             description
              templateKey
              full_image {
                 childImageSharp {

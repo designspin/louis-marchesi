@@ -25,7 +25,7 @@ class GoogleMap extends Component {
             <input type="submit" value="directions" />
             </form>
             <div className="google-map-inner">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.560677019816!2d1.2963652516273942!3d52.6317827355922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3dd54f3fb31%3A0x8536c4f105e3ec6d!2sLouis+Marchesi!5e0!3m2!1sen!2suk!4v1536843676558" width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
+            <iframe title="where to find us" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.560677019816!2d1.2963652516273942!3d52.6317827355922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3dd54f3fb31%3A0x8536c4f105e3ec6d!2sLouis+Marchesi!5e0!3m2!1sen!2suk!4v1536843676558" width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
             </div>
         </div>
         );

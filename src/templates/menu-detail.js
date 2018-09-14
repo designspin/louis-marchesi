@@ -98,7 +98,11 @@ const MenuPage = ({data}) => {
     const { menus } = data;
 
     return (
-        <Layout templateKey={post.frontmatter.templateKey}>
+        <Layout 
+            templateKey={post.frontmatter.templateKey} 
+            title={post.frontmatter.title}
+            description={post.frontmatter.description} 
+            >
             <MenuPageTemplate
                 title={post.frontmatter.title}
                 content={post.html}
