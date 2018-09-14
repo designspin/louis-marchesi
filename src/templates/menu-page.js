@@ -16,28 +16,26 @@ export const FoodPageTemplate = ({
 
     return (
         <>
-        <div className="site-page">
-            <div className="site-hero">
-            <Img className="site-hero-image"
-                alt="Food at louis Marchesi"
-                sizes={fullImage}
-                style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    width: "100%",
-                    height: "100%"
-                }} />
-            </div>
-            <section className="section container">
-                <div className="row">
-                    <div className="col-12">
-                        <h1 className="page-title">{title}</h1>
-                        <PostContent content={content} />
-                    </div>
-                </div>        
-            </section>
+        <div className="site-hero">
+        <Img className="site-hero-image"
+            alt="Food at louis Marchesi"
+            sizes={fullImage}
+            style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "100%",
+                height: "100%"
+            }} />
         </div>
+        <section className="section container">
+            <div className="row">
+                <div className="col-12">
+                    <h1 className="page-title">{title}</h1>
+                    <PostContent content={content} />
+                </div>
+            </div>        
+        </section>
         <aside className="section section--functions">
             <div className="section-title">
                 <h2 className="container">Hungry? Take A Look At Our Menus</h2>

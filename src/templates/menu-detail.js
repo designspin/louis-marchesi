@@ -17,7 +17,6 @@ const MenuPageTemplate = ({
 
     return (
         <>
-        <div className="site-page">
             <div className="site-hero">
             <Img className="site-hero-image"
                 alt={title}
@@ -65,7 +64,6 @@ const MenuPageTemplate = ({
                     </div>
                 </div>        
             </section>
-        </div>
         <aside className="section section--functions">
             <div className="section-title">
                 <h2 className="container">See More Menus</h2>

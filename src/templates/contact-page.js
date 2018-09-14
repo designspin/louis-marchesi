@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Img from 'gatsby-image';
 import Content, { HTMLContent } from '../components/Content';
 
-const GeneralPageTemplate = ({ 
+const ContactPageTemplate = ({ 
     content,
     contentComponent,
     title, 
@@ -38,13 +38,13 @@ const GeneralPageTemplate = ({
     )
 }
 
-const GeneralPage = ({data}) => {
+const ContactPage = ({data}) => {
     
     const { markdownRemark: post } = data;
 
     return (
         <Layout templateKey={post.frontmatter.templateKey}>
-            <GeneralPageTemplate
+            <ContactPageTemplate
                 title={post.frontmatter.title}
                 content={post.html}
                 contentComponent={HTMLContent}
@@ -54,10 +54,10 @@ const GeneralPage = ({data}) => {
     );
 };
 
-export default GeneralPage;
+export default ContactPage;
 
-export const GeneralDetailQuery = graphql`
- query GeneralDetail($id: String!) {
+export const GontactDetailQuery = graphql`
+ query ContactDetail($id: String!) {
      markdownRemark(id: { eq: $id }) {
         id
         html

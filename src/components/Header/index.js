@@ -16,10 +16,10 @@ export const HeaderNavLinks = () =>
             <Link activeClassName="active" to="/rooms"><small>Function</small>Rooms</Link>
         </li>
         <li className="site-navbar-item">
-            <a href="#"><small>Our</small>Accomodation</a>
+            <Link activeClassName="active" to="/accomodation"><small>Our</small>Accomodation</Link>
         </li>
         <li className="site-navbar-item">
-            <a href="#"><small>How To</small>Contact</a>
+            <Link activeClassName="active" to="/contact"><small>How To</small>Contact</Link>
         </li>
     </>
 

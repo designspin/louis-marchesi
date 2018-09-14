@@ -78,10 +78,10 @@ export const HomePageTemplate = ({
         <section className="section">
             <div className="container">
                 <div className="row">
-                        <div className="col-md-8">
+                        <article className="col-md-8">
                             <h2 className="page-title">{title}</h2>
                             <PostContent content={content} /> 
-                        </div>
+                        </article>
                 </div>
             </div>
         </section>

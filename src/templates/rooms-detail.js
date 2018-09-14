@@ -14,7 +14,7 @@ export const RoomsDetailPageTemplate = ({
     const PostContent = contentComponent || Content;
 
     return (
-        <div className="site-page">
+        <>
             <div className="site-hero">
             <Img className="site-hero-image"
                 alt="Rooms at louis Marchesi"
@@ -31,7 +31,7 @@ export const RoomsDetailPageTemplate = ({
                 <h1 className="page-title">{title}</h1>
                 <PostContent content={content} />        
             </section>
-        </div>
+        </>
     )
 };
 

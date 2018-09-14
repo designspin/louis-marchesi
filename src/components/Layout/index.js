@@ -27,7 +27,7 @@ const LayoutQuery = graphql`
 `;
 
 const Layout = ({ children, data, ...props}) => 
-    <div className={`site-container ${props.navOpen ? 'site-container--nav-on' : ''}`}>
+    <div className={`site-container site-page ${props.navOpen ? 'site-container--nav-on' : ''}`}>
         <div className="site-main">
             <Header phone={ data.phone }/>
             { children }
