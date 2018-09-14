@@ -7,6 +7,7 @@ import logo from '../images/louis-marchesi-logo.png';
 import { FaBeer } from 'react-icons/fa';
 import FBEvents from '../components/FB/events';
 import GoogleMap from '../components/GoogleMap/googlemap';
+import Content, { HTMLContent } from '../components/Content';
 
 const SiteHero = ({ isPreview, fullImage, heading }) => {
     const preview = isPreview ? (
@@ -28,9 +29,9 @@ const SiteHero = ({ isPreview, fullImage, heading }) => {
                 </div>
             </div>
             <div className="site-hero-bottom">
-                <a className="site-hero-see-more">
+                <button className="site-hero-see-more">
                     <FaBeer size="2rem"/>
-                </a>
+                </button>
             </div>
         </div>
     ) : (
@@ -48,9 +49,9 @@ const SiteHero = ({ isPreview, fullImage, heading }) => {
                 </div>
             </div>
             <div className="site-hero-bottom">
-                <a className="site-hero-see-more">
+                <button className="site-hero-see-more">
                     <FaBeer size="2rem"/>
-                </a>
+                </button>
             </div>
         </div>
     );
@@ -62,14 +63,29 @@ export const HomePageTemplate = ({
     isPreview,
     heading,
     fullImage,
+    content,
+    contentComponent,
+    title,
     ...props
 }) => {
+    const PostContent = contentComponent || Content;
     return (
     <>
         <div className="full-height">
             <Header phone={props.phone}/>
             <SiteHero isPreview={ isPreview } fullImage={ fullImage } heading={ heading } />
         </div>
+        <section className="section">
+            <div className="container">
+                <div className="row">
+                        <div className="col-md-8">
+                            <h2 className="page-title">{title}</h2>
+                            <PostContent content={content} /> 
+                        </div>
+                </div>
+            </div>
+        </section>
+        
         <section className="section section--red">
             <div className="container">
                 <div className="row">
@@ -95,6 +111,9 @@ const HomePage = ({data}) => {
                 isPreview="false"
                 fullImage={frontmatter.full_image.childImageSharp.fluid}
                 heading={frontmatter.heading}
+                content={data.markdownRemark.html}
+                contentComponent={HTMLContent}
+                title={frontmatter.title}
             />
         </Layout>
     )
@@ -105,7 +124,9 @@ export default HomePage;
 export const homePageQuery = graphql`
  query HomePage($id: String!) {
      markdownRemark(id: { eq: $id }) {
-         frontmatter {
+        html 
+        frontmatter {
+             title
              templateKey
              heading
              full_image {
